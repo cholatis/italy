@@ -1,4 +1,4 @@
-<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>10 ร้านเด็ดมิลาน</title>
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ร้านอร่อยมิลาน + Lake Como</title>
 <style>
 :root{--navy:#16324f;--blue:#246bfd;--cream:#f7f4ee;--ink:#15202b;--muted:#657786;--card:#fff;--line:#e7e1d8}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -17,13 +17,14 @@ ul{margin:8px 0 12px;padding-left:18px}li{margin:3px 0}
 .tip{background:#fff6d9;border:1px solid #f1d881;border-radius:12px;padding:8px 12px;font-size:14px;margin-bottom:12px}
 a.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:750;border-radius:11px;padding:9px 13px;font-size:14px}
 iframe{width:100%;height:100%;min-height:260px;border:0;border-radius:14px;background:#eef1f5}
+.sec{max-width:960px;margin:28px auto 4px;font-size:22px;color:var(--navy)}.secsub{max-width:960px;margin:0 auto 14px;color:var(--muted);font-size:14px}
 footer{max-width:960px;margin:auto;padding:0 18px 40px;color:#667;font-size:13px}
 @media(max-width:700px){.card{grid-template-columns:1fr;padding:16px}iframe{min-height:220px}}
 </style></head><body>
-<header><div class="wrap"><div>สรุปจากคลิป YouTube</div><h1>ตะลุยกิน 10 ร้านเด็ดมิลาน 🇮🇹</h1><p>รายชื่อร้านตามลำดับในคลิป พร้อมเมนูที่กิน ราคา และแผนที่ Google Maps ของแต่ละร้าน</p></div></header>
+<header><div class="wrap"><div>สรุปจากคลิป YouTube</div><h1>ร้านอร่อยมิลาน + Lake Como 🇮🇹</h1><p>รายชื่อร้านตามลำดับในคลิป YouTube 2 คลิป พร้อมเมนูที่กิน ราคา และแผนที่ Google Maps ของแต่ละร้าน</p></div></header>
 <nav id="nav"></nav>
 <main id="list"></main>
-<footer>ที่มา: คลิป “ตะลุยกิน 10 ร้านเด็ดมิลาน!! แหล่งรวมอาหารอร่อยทุกสัญชาติของอิตาลี” (vJ0bxpIgDI0) · ที่อยู่ตรวจจากเว็บไซต์รีวิว/ไกด์ ควรเช็กเวลาเปิด-ปิดใน Google Maps อีกครั้งก่อนไป · ราคาเป็นราคาตอนถ่ายคลิป</footer>
+<footer>ที่มา: คลิป “ตะลุยกิน 10 ร้านเด็ดมิลาน!!” (vJ0bxpIgDI0) และ “กินเที่ยวชิล ๆ รอบ Lake Como” (99FOnwoJSuw) · ที่อยู่ตรวจจากเว็บไซต์รีวิว/ไกด์ ควรเช็กเวลาเปิด-ปิดใน Google Maps อีกครั้งก่อนไป · ราคาเป็นราคาตอนถ่ายคลิป</footer>
 <script>
 const R=[
 {n:"Spontini",t:"พิซซ่าชิ้นหนา",a:"Via Santa Radegonda 11, Milano (ใกล้ Duomo)",q:"Spontini Via Santa Radegonda 11 Milano",
@@ -47,12 +48,23 @@ const R=[
 {n:"Trippa",t:"ทราตตอเรีย",a:"Via Giorgio Vasari 1, Milano",q:"Trippa Trattoria Via Giorgio Vasari 1 Milano",
  m:["ผ้าขี้ริ้วทอด (fried tripe) — เมนูซิกเนเจอร์","Vitello tonnato (เนื้อลูกวัวซอสทูน่า)","พาสต้าชีสเข้มข้น","เมนูเปลี่ยนตามฤดูกาล"],p:"",tip:"จองยากมาก เปิดจองล่วงหน้า ~3 สัปดาห์บนเว็บร้าน"}
 ];
+const C=[
+{n:"ร้านแซนด์วิชใน Bellagio (ไม่เห็นชื่อร้านในคลิป)",t:"แซนด์วิช",a:"ย่านเมืองเก่า Bellagio ใกล้โบสถ์ San Giacomo",q:"Bellagio Como",
+ m:["แซนด์วิชขนมปังกรอบ ไส้ผักกาด/แฮม กินระหว่างเดินตรอกบันไดหิน"],p:"",tip:"แถว Salita Serbelloni มีร้านแซนด์วิช/พาณินีหลายร้าน — ในคลิปผ่าน Nando, Barchetta ด้วย (ไม่ได้กิน)"},
+{n:"Gelateria del Borgo",t:"เจลาโต้",a:"Via Giuseppe Garibaldi 46, Bellagio",q:"Gelateria del Borgo Via Garibaldi 46 Bellagio",
+ m:["เจลาโต้ร้านดังของ Bellagio — คนต่อคิวหน้าร้าน"],p:"",tip:"อยู่ถนนหลักกลางเมือง เดินจากท่าเรือ ~5 นาที"},
+{n:"Bar Il Molo (น่าจะเป็นร้านนี้)",t:"บาร์ริมทะเลสาบ",a:"Via Riva Garibaldi 14, Varenna",q:"Bar Il Molo Varenna",
+ m:["นั่งเก้าอี้เหล็กดัดสีขาวริมน้ำ วิวบ้านสีสันของ Varenna","เหมาะกับ Aperol Spritz ตอนแดดเย็นก่อนนั่งรถไฟกลับ"],p:"",tip:"ฉากปิดคลิป — ไม่มีชื่อร้านขึ้นในคลิป แต่ลักษณะตรงกับ Bar Il Molo ที่มุมท่าเรือเล็ก Varenna · ใกล้ Villa Monastero"}
+];
 const enc=s=>encodeURIComponent(s);
-document.getElementById('nav').innerHTML=R.map((r,i)=>`<a href="#r${i+1}">${i+1}. ${r.n}</a>`).join('');
-document.getElementById('list').innerHTML=R.map((r,i)=>`<section class="card" id="r${i+1}"><div>
-<span class="no">#${i+1}</span><span class="type">${r.t}</span><h2>${r.n}</h2><p class="addr">📍 ${r.a}</p>
+const card=(r,id,no)=>`<section class="card" id="${id}"><div>
+<span class="no">${no}</span><span class="type">${r.t}</span><h2>${r.n}</h2><p class="addr">📍 ${r.a}</p>
 <ul>${r.m.map(x=>`<li>${x}</li>`).join('')}</ul>${r.p?`<p class="price">💶 ${r.p}</p>`:''}
 <div class="tip">💡 ${r.tip}</div>
 <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${enc(r.q)}">🧭 เปิดใน Google Maps</a></div>
-<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=${enc(r.q)}&z=16&output=embed" title="แผนที่ ${r.n}"></iframe></section>`).join('');
+<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=${enc(r.q)}&z=16&output=embed" title="แผนที่ ${r.n}"></iframe></section>`;
+const sec=(t,s)=>`<h2 class="sec">${t}</h2><p class="secsub">${s}</p>`;
+document.getElementById('nav').innerHTML=R.map((r,i)=>`<a href="#r${i+1}">${i+1}. ${r.n}</a>`).join('')+C.map((r,i)=>`<a href="#c${i+1}">⛴️ ${r.n.split(' (')[0]}</a>`).join('');
+document.getElementById('list').innerHTML=sec('🍝 มิลาน — 10 ร้านเด็ด','จากคลิป “ตะลุยกิน 10 ร้านเด็ดมิลาน!!”')+R.map((r,i)=>card(r,'r'+(i+1),'#'+(i+1))).join('')
++sec('⛴️ Lake Como — Bellagio & Varenna','จากคลิป “กินเที่ยวชิล ๆ รอบ Lake Como” · ตรงกับ Day 2 (จ. 12 ต.ค.) ของแผนเที่ยว')+C.map((r,i)=>card(r,'c'+(i+1),'Como #'+(i+1))).join('');
 </script></body></html>
