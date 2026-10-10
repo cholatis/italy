@@ -1,0 +1,58 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>10 ร้านเด็ดมิลาน</title>
+<style>
+:root{--navy:#16324f;--blue:#246bfd;--cream:#f7f4ee;--ink:#15202b;--muted:#657786;--card:#fff;--line:#e7e1d8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Thai",sans-serif;line-height:1.55}
+header{color:#fff;padding:36px 20px 28px;background:linear-gradient(135deg,#7a1f1f,#d2462f)}
+.wrap{max-width:960px;margin:auto}h1{font-size:clamp(28px,5vw,44px);line-height:1.12;margin:8px 0}header p{margin:6px 0;opacity:.92;max-width:720px}
+nav{position:sticky;top:0;z-index:5;display:flex;overflow:auto;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 3px 12px #0000000e}
+nav a{white-space:nowrap;text-decoration:none;color:var(--navy);padding:12px 14px;font-weight:700;font-size:14px}
+main{padding:22px 14px 60px}
+.card{max-width:960px;margin:0 auto 20px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 8px 25px #15314d0b;scroll-margin-top:60px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.no{display:inline-block;background:#fde8e4;color:#b23a22;border-radius:99px;padding:4px 10px;font-size:13px;font-weight:800}
+.type{display:inline-block;background:#eef1f5;color:#21354b;border-radius:99px;padding:4px 10px;font-size:13px;font-weight:700;margin-left:4px}
+h2{margin:10px 0 2px;font-size:24px}.addr{color:var(--muted);margin:0 0 10px;font-size:14px}
+ul{margin:8px 0 12px;padding-left:18px}li{margin:3px 0}
+.price{font-weight:800;color:#28743b}
+.tip{background:#fff6d9;border:1px solid #f1d881;border-radius:12px;padding:8px 12px;font-size:14px;margin-bottom:12px}
+a.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:750;border-radius:11px;padding:9px 13px;font-size:14px}
+iframe{width:100%;height:100%;min-height:260px;border:0;border-radius:14px;background:#eef1f5}
+footer{max-width:960px;margin:auto;padding:0 18px 40px;color:#667;font-size:13px}
+@media(max-width:700px){.card{grid-template-columns:1fr;padding:16px}iframe{min-height:220px}}
+</style></head><body>
+<header><div class="wrap"><div>สรุปจากคลิป YouTube</div><h1>ตะลุยกิน 10 ร้านเด็ดมิลาน 🇮🇹</h1><p>รายชื่อร้านตามลำดับในคลิป พร้อมเมนูที่กิน ราคา และแผนที่ Google Maps ของแต่ละร้าน</p></div></header>
+<nav id="nav"></nav>
+<main id="list"></main>
+<footer>ที่มา: คลิป “ตะลุยกิน 10 ร้านเด็ดมิลาน!! แหล่งรวมอาหารอร่อยทุกสัญชาติของอิตาลี” (vJ0bxpIgDI0) · ที่อยู่ตรวจจากเว็บไซต์รีวิว/ไกด์ ควรเช็กเวลาเปิด-ปิดใน Google Maps อีกครั้งก่อนไป · ราคาเป็นราคาตอนถ่ายคลิป</footer>
+<script>
+const R=[
+{n:"Spontini",t:"พิซซ่าชิ้นหนา",a:"Via Santa Radegonda 11, Milano (ใกล้ Duomo)",q:"Spontini Via Santa Radegonda 11 Milano",
+ m:["พิซซ่าชิ้นหนา ขอบนุ่ม — สั่ง Crudo & Rucola (แฮมพาร์มา ร็อกเก็ต ชีส)","มีคอมโบพิซซ่า + เครื่องดื่ม/เบียร์"],p:"Crudo & Rucola €8",tip:"ร้านดังมีหลายสาขา สาขานี้อยู่ติด Duomo คนต่อคิวเยอะ"},
+{n:"Pasticceria Marchesi 1824",t:"ขนม/คาเฟ่",a:"Galleria Vittorio Emanuele II, Milano",q:"Pasticceria Marchesi 1824 Galleria Vittorio Emanuele II Milano",
+ m:["บริยอชกลิ่นเลมอน เนื้อเบา","ขนมชูครีมลูกเล็ก — ในคลิปบอก “ต้องสั่ง แนะนำ”","กาแฟ"],p:"",tip:"ร้านอยู่ชั้นบนใน Galleria ตกแต่งสวยมาก แวะหลังเดินหมุนส้นเท้าบนกระเบื้องรูปวัว"},
+{n:"De Santis",t:"แซนด์วิช",a:"Corso Magenta 9, Milano",q:"De Santis panini Corso Magenta 9 Milano",
+ m:["แซนด์วิชเนื้อทาร์ทาร์ (beef tartare) กับผักกาด ซอสเปรี้ยว ๆ","ขนมปังกรอบ ไส้แน่น"],p:"2 ชิ้น ~€17 (~674 บาท)",tip:"ในคลิปรอประมาณ 1 ชม. คิวยาวมาก"},
+{n:"Gelato Fatto con Amore",t:"เจลาโต้",a:"Corso Magenta 30, Milano",q:"Gelato Fatto con Amore Milano",
+ m:["เจลาโต้เนื้อเข้มข้น — เฮเซลนัท, พิสตาชิโอ","โคนใส่ได้หลายรส มีเวเฟอร์"],p:"~€3.20",tip:"ได้รางวัลเยอะ ติดกำแพงในร้าน"},
+{n:"Thai Square",t:"อาหารไทย",a:"Via Cenisio 8, Milano",q:"Thai Square Via Cenisio 8 Milano",
+ m:["ผัดไทย","แกงเขียวหวาน","กะเพราเนื้อสับ","ปอเปี๊ยะทอด"],p:"",tip:"เชฟเป็นคนไทยทั้งร้าน รสจัดใกล้ของไทย — เหมาะตอนเลี่ยนอาหารอิตาเลียน"},
+{n:"Ta-Hua China Restaurant",t:"อาหารจีน",a:"Via Fara 15, Milano (ใกล้ Centrale)",q:"Ta Hua China Restaurant Via Fara 15 Milano",
+ m:["ซี่โครงหมูย่าง ซอสแดงหวาน","หอยเชลล์ผัดบรอกโคลี","ติ่มซำ (นึ่งถึงกลางคืน)"],p:"",tip:"ควรจองล่วงหน้า ลูกค้าแน่นมาก · เดินจาก Hotel Bristol ได้ ~10 นาที"},
+{n:"Luini",t:"Panzerotti",a:"Via Santa Radegonda 16, Milano (ใกล้ Duomo)",q:"Luini Panzerotti Via Santa Radegonda 16 Milano",
+ m:["Panzerotti ทอด — แฮม + มอสซาเรลล่า ชีสยืด","มีไส้หวาน เช่น ริคอตต้าช็อกโกแลต"],p:"",tip:"เปิด 10:00 ไปก่อนเปิดเพื่อเลี่ยงคิว"},
+{n:"Starbucks Reserve Roastery Milano",t:"คาเฟ่",a:"Piazza Cordusio 3, Milano",q:"Starbucks Reserve Roastery Milano Piazza Cordusio",
+ m:["อาคารไปรษณีย์เก่า ตกแต่งใหญ่โต — สาขาแรกของ Starbucks ในอิตาลี","มีโซนกาแฟดริป ค็อกเทล/ม็อกเทล ขนม"],p:"",tip:"นั่งโต๊ะมีค่าบริการเพิ่ม (~€2/คน)"},
+{n:"Luna Rossa",t:"ทราตตอเรีย/พิซซ่า",a:"Via Broletto 26, Milano",q:"Luna Rossa Ristorante Pizzeria Via Broletto 26 Milano",
+ m:["ริซอตโต้ซีฟู้ด (กุ้ง หมึก หอยแมลงภู่)","สปาเก็ตตี้กุ้ง","พิซซ่าเตาฟืน"],p:"มื้อกลางวัน ~€11",tip:"ร้านคนท้องถิ่น พนักงานออฟฟิศมากินเยอะ ราคาไม่แพง"},
+{n:"Trippa",t:"ทราตตอเรีย",a:"Via Giorgio Vasari 1, Milano",q:"Trippa Trattoria Via Giorgio Vasari 1 Milano",
+ m:["ผ้าขี้ริ้วทอด (fried tripe) — เมนูซิกเนเจอร์","Vitello tonnato (เนื้อลูกวัวซอสทูน่า)","พาสต้าชีสเข้มข้น","เมนูเปลี่ยนตามฤดูกาล"],p:"",tip:"จองยากมาก เปิดจองล่วงหน้า ~3 สัปดาห์บนเว็บร้าน"}
+];
+const enc=s=>encodeURIComponent(s);
+document.getElementById('nav').innerHTML=R.map((r,i)=>`<a href="#r${i+1}">${i+1}. ${r.n}</a>`).join('');
+document.getElementById('list').innerHTML=R.map((r,i)=>`<section class="card" id="r${i+1}"><div>
+<span class="no">#${i+1}</span><span class="type">${r.t}</span><h2>${r.n}</h2><p class="addr">📍 ${r.a}</p>
+<ul>${r.m.map(x=>`<li>${x}</li>`).join('')}</ul>${r.p?`<p class="price">💶 ${r.p}</p>`:''}
+<div class="tip">💡 ${r.tip}</div>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${enc(r.q)}">🧭 เปิดใน Google Maps</a></div>
+<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=${enc(r.q)}&z=16&output=embed" title="แผนที่ ${r.n}"></iframe></section>`).join('');
+</script></body></html>

@@ -1,0 +1,5 @@
+# วิดีโอ/ไฟล์ใหญ่
+*.mp4
+*.webm
+_frames/
+.DS_Store
