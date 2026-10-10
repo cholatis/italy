@@ -1,4 +1,4 @@
-<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ร้านอร่อยมิลาน + Lake Como</title>
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ร้านอร่อยมิลาน · Lake Como · เวนิส</title>
 <style>
 :root{--navy:#16324f;--blue:#246bfd;--cream:#f7f4ee;--ink:#15202b;--muted:#657786;--card:#fff;--line:#e7e1d8}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -21,10 +21,10 @@ iframe{width:100%;height:100%;min-height:260px;border:0;border-radius:14px;backg
 footer{max-width:960px;margin:auto;padding:0 18px 40px;color:#667;font-size:13px}
 @media(max-width:700px){.card{grid-template-columns:1fr;padding:16px}iframe{min-height:220px}}
 </style></head><body>
-<header><div class="wrap"><div>สรุปจากคลิป YouTube</div><h1>ร้านอร่อยมิลาน + Lake Como 🇮🇹</h1><p>รายชื่อร้านตามลำดับในคลิป YouTube 2 คลิป พร้อมเมนูที่กิน ราคา และแผนที่ Google Maps ของแต่ละร้าน</p></div></header>
+<header><div class="wrap"><div>สรุปจากคลิป YouTube</div><h1>ร้านอร่อยมิลาน · Lake Como · เวนิส 🇮🇹</h1><p>รายชื่อร้านตามลำดับในคลิป YouTube 3 คลิป พร้อมเมนูที่กิน ราคา และแผนที่ Google Maps ของแต่ละร้าน</p></div></header>
 <nav id="nav"></nav>
 <main id="list"></main>
-<footer>ที่มา: คลิป “ตะลุยกิน 10 ร้านเด็ดมิลาน!!” (vJ0bxpIgDI0) และ “กินเที่ยวชิล ๆ รอบ Lake Como” (99FOnwoJSuw) · ที่อยู่ตรวจจากเว็บไซต์รีวิว/ไกด์ ควรเช็กเวลาเปิด-ปิดใน Google Maps อีกครั้งก่อนไป · ราคาเป็นราคาตอนถ่ายคลิป</footer>
+<footer>ที่มา: คลิป “ตะลุยกิน 10 ร้านเด็ดมิลาน!!” (vJ0bxpIgDI0) , “กินเที่ยวชิล ๆ รอบ Lake Como” (99FOnwoJSuw) และ “ตะลุยกิน เที่ยวเวนิส 24 ชั่วโมง!!” (DryA14F22mI) · ที่อยู่ตรวจจากเว็บไซต์รีวิว/ไกด์ ควรเช็กเวลาเปิด-ปิดใน Google Maps อีกครั้งก่อนไป · ราคาเป็นราคาตอนถ่ายคลิป</footer>
 <script>
 const R=[
 {n:"Spontini",t:"พิซซ่าชิ้นหนา",a:"Via Santa Radegonda 11, Milano (ใกล้ Duomo)",q:"Spontini Via Santa Radegonda 11 Milano",
@@ -56,6 +56,18 @@ const C=[
 {n:"Bar Il Molo (น่าจะเป็นร้านนี้)",t:"บาร์ริมทะเลสาบ",a:"Via Riva Garibaldi 14, Varenna",q:"Bar Il Molo Varenna",
  m:["นั่งเก้าอี้เหล็กดัดสีขาวริมน้ำ วิวบ้านสีสันของ Varenna","เหมาะกับ Aperol Spritz ตอนแดดเย็นก่อนนั่งรถไฟกลับ"],p:"",tip:"ฉากปิดคลิป — ไม่มีชื่อร้านขึ้นในคลิป แต่ลักษณะตรงกับ Bar Il Molo ที่มุมท่าเรือเล็ก Varenna · ใกล้ Villa Monastero"}
 ];
+const V=[
+{n:"Oriental Express (ร้านอาหารจีน)",t:"อาหารจีน",a:"ใกล้สถานี Venezia Santa Lucia (ที่อยู่ยังไม่ยืนยัน)",q:"Oriental Express ristorante cinese Venezia Santa Lucia",
+ m:["มื้อแรกคืนที่ถึงเวนิส — อาหารจีน ชื่อร้านทำให้นึกว่าเป็นร้านโอเรียนเต็ล"],p:"",tip:"เหมาะเป็นมื้อดึกหลังลงรถไฟ · ชื่อร้านมาจากคำบรรยายในคลิป ค้นที่อยู่ยืนยันไม่ได้ ควรเช็กใน Google Maps"},
+{n:"Caffè Florian",t:"คาเฟ่ประวัติศาสตร์",a:"Piazza San Marco 57, Venezia",q:"Caffe Florian Piazza San Marco Venezia",
+ m:["คาเฟ่เก่าแก่ที่สุดในอิตาลี เปิดตั้งแต่ปี 1720 ตกแต่งวินเทจสุด ๆ","ช็อกโกแลตร้อนวิปครีม","เค้กพิสตาชิโอมูสกับราสเบอร์รี"],p:"",tip:"มีวงดนตรีเล่นสดหน้าร้าน — นั่งโต๊ะด้านนอกตอนดนตรีเล่นจะมีค่าดนตรีเพิ่ม"},
+{n:"Rosticceria Gislon",t:"ของทอด/สตรีทฟู้ด",a:"Calle de la Bissa 5424/a (ใกล้ Rialto / Campo San Bartolomeo)",q:"Rosticceria Gislon Calle de la Bissa Venezia",
+ m:["Mozzarella in carrozza — ขนมปังสอดชีสกับแฮมชุบแป้งทอด","Polpetta di baccalà, arancino di pesce, baccalà fritto","Spritz ใส่แก้วถือเดิน"],p:"",tip:"คิวยาวมาก แต่ราคาถูก ซื้อแล้วไปนั่งกินที่ Campo San Bartolomeo"},
+{n:"Gelatoteca Suso",t:"เจลาโต้",a:"Sestiere San Marco 5453/A (Calle della Bissa ใกล้ Rialto)",q:"Gelatoteca Suso Venezia",
+ m:["เจลาโต้ร้านดัง เปิดตั้งแต่ 2010 — รสโยเกิร์ตเบอร์รี, พิสตาชิโอ","มีเวเฟอร์ตราร้าน"],p:"€7.70 (~303 บาท)",tip:"อยู่ซอยเดียวกับ Gislon — กินของทอดแล้วต่อไอติมได้เลย"},
+{n:"Ristorante Casa Bonita",t:"ซีฟู้ด/อาหารเวเนเชียน",a:"Fondamenta Savorgnan, Cannaregio 492",q:"Ristorante Casa Bonita Cannaregio Venezia",
+ m:["คาลามารีทอด — ในคลิปบอก “อร่อยมาก!!” กรอบเด้ง","สปาเก็ตตี้หมึกดำ","สปาเก็ตตี้หอยลาย (vongole)","ออเดิร์ฟซีฟู้ดรวม (ขึ้นชื่อตามรีวิว)"],p:"",tip:"นั่งริมคลองบรรยากาศดีตอนกลางคืน · วันเสาร์คนเยอะ ควรจอง · ห่างจากสถานี ~10 นาที"}
+];
 const enc=s=>encodeURIComponent(s);
 const card=(r,id,no)=>`<section class="card" id="${id}"><div>
 <span class="no">${no}</span><span class="type">${r.t}</span><h2>${r.n}</h2><p class="addr">📍 ${r.a}</p>
@@ -64,7 +76,8 @@ const card=(r,id,no)=>`<section class="card" id="${id}"><div>
 <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${enc(r.q)}">🧭 เปิดใน Google Maps</a></div>
 <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=${enc(r.q)}&z=16&output=embed" title="แผนที่ ${r.n}"></iframe></section>`;
 const sec=(t,s)=>`<h2 class="sec">${t}</h2><p class="secsub">${s}</p>`;
-document.getElementById('nav').innerHTML=R.map((r,i)=>`<a href="#r${i+1}">${i+1}. ${r.n}</a>`).join('')+C.map((r,i)=>`<a href="#c${i+1}">⛴️ ${r.n.split(' (')[0]}</a>`).join('');
+document.getElementById('nav').innerHTML=R.map((r,i)=>`<a href="#r${i+1}">${i+1}. ${r.n}</a>`).join('')+C.map((r,i)=>`<a href="#c${i+1}">⛴️ ${r.n.split(' (')[0]}</a>`).join('')+V.map((r,i)=>`<a href="#v${i+1}">🛶 ${r.n.split(' (')[0]}</a>`).join('');
 document.getElementById('list').innerHTML=sec('🍝 มิลาน — 10 ร้านเด็ด','จากคลิป “ตะลุยกิน 10 ร้านเด็ดมิลาน!!”')+R.map((r,i)=>card(r,'r'+(i+1),'#'+(i+1))).join('')
-+sec('⛴️ Lake Como — Bellagio & Varenna','จากคลิป “กินเที่ยวชิล ๆ รอบ Lake Como” · ตรงกับ Day 2 (จ. 12 ต.ค.) ของแผนเที่ยว')+C.map((r,i)=>card(r,'c'+(i+1),'Como #'+(i+1))).join('');
++sec('⛴️ Lake Como — Bellagio & Varenna','จากคลิป “กินเที่ยวชิล ๆ รอบ Lake Como” · ตรงกับ Day 2 (จ. 12 ต.ค.) ของแผนเที่ยว')+C.map((r,i)=>card(r,'c'+(i+1),'Como #'+(i+1))).join('')
++sec('🛶 เวนิส — 24 ชั่วโมง','จากคลิป “ตะลุยกิน เที่ยวเวนิส 24 ชั่วโมง!!” · ตรงกับ Day 5 (พฤ. 15 ต.ค.) ของแผนเที่ยว')+V.map((r,i)=>card(r,'v'+(i+1),'Venice #'+(i+1))).join('');
 </script></body></html>
