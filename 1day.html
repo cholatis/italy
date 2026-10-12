@@ -1,0 +1,111 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Milan 1 Day ตาม Monocle</title>
+<style>
+:root{--ink:#15202b;--muted:#657786;--cream:#f6f3ee;--card:#fff;--line:#e7e1d8;--acc:#1f6f5c;--pink:#e85d8a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Thai",sans-serif;line-height:1.55}
+header{color:#fff;padding:36px 20px 28px;background:linear-gradient(135deg,#123c33,#1f6f5c 55%,#e85d8a)}
+.wrap{max-width:960px;margin:auto}h1{font-size:clamp(28px,5vw,44px);line-height:1.12;margin:8px 0}header p{margin:6px 0;opacity:.92;max-width:720px}
+.pill{display:inline-block;background:#ffffff26;border:1px solid #ffffff55;border-radius:99px;padding:4px 10px;font-size:13px;margin:4px 6px 0 0}
+main{padding:22px 14px 60px}
+.box{max-width:960px;margin:0 auto 18px;background:#fff6d9;border:1px solid #f1d881;border-radius:14px;padding:14px 16px;font-size:15px}
+.box ul{margin:6px 0 0;padding-left:18px}
+.actions{max-width:960px;margin:0 auto 22px;display:flex;gap:10px;flex-wrap:wrap}
+a.btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;font-weight:750;border-radius:11px;padding:9px 13px;font-size:14px}
+a.btn.alt{background:#eef1f5;color:#21354b}
+h2.sec{max-width:960px;margin:28px auto 4px;font-size:22px;color:#123c33}.secsub{max-width:960px;margin:0 auto 14px;color:var(--muted);font-size:14px}
+.stop{max-width:960px;margin:0 auto 18px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 8px 25px #15314d0b;display:grid;grid-template-columns:1fr 1fr;gap:18px;scroll-margin-top:20px}
+.time{display:inline-block;background:#e3f1ec;color:var(--acc);border-radius:99px;padding:4px 10px;font-size:13px;font-weight:800}
+.type{display:inline-block;background:#fde7ef;color:#b13a64;border-radius:99px;padding:4px 10px;font-size:13px;font-weight:700;margin-left:4px}
+.stop h3{margin:10px 0 2px;font-size:22px}.addr{color:var(--muted);margin:0 0 8px;font-size:14px}
+.stop ul{margin:6px 0 10px;padding-left:18px}.stop li{margin:3px 0}
+.move{font-size:14px;color:#21354b;background:#eef1f5;border-radius:10px;padding:7px 10px;margin:8px 0 10px}
+.tip{background:#fff6d9;border:1px solid #f1d881;border-radius:12px;padding:8px 12px;font-size:14px;margin-bottom:12px}
+iframe{width:100%;height:100%;min-height:250px;border:0;border-radius:14px;background:#eef1f5}
+label.done{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--muted);margin-top:10px;cursor:pointer}
+footer{max-width:960px;margin:auto;padding:0 18px 40px;color:#667;font-size:13px}
+@media(max-width:700px){.stop{grid-template-columns:1fr;padding:15px}iframe{min-height:210px}}
+</style></head><body>
+<header><div class="wrap"><div>สายอาร์ต · ตามหนังสือ The Monocle Travel Guide: Milan</div>
+<h1>มิลาน 1 วัน<br>ดีไซน์ · อาร์ต · คาเฟ่</h1>
+<p>สรุปจากคลิป “เอาใจสายอาร์ต แจกพิกัด เที่ยว Milan ตามหนังสือ Monocle Travel” แล้วเรียงใหม่เป็นเส้นทาง 1 วันที่เดินต่อกันได้ พร้อมแผนที่ทุกจุด</p>
+<span class="pill">📅 เหมาะกับ พ. 14 ต.ค. (Day 4)</span><span class="pill">🚇 Metro M3 + เดิน</span><span class="pill">🏨 เริ่ม/จบใกล้ Hotel Bristol</span></div></header>
+<main>
+<div class="box"><b>ก่อนออกเดิน</b><ul>
+<li><b>Fondazione Prada ปิดวันอังคาร</b> · Pinacoteca di Brera, Triennale และ Museo del Novecento ปิดวันจันทร์ → วันพุธหรือศุกร์ดีที่สุด</li>
+<li>จองตั๋วดาดฟ้า Duomo (แบบมีลิฟต์) ล่วงหน้าที่ duomomilano.it</li>
+<li>วันนี้เดินเยอะกว่าแผน “วันพัก” เดิมใน italy.html — ถ้าอยากเบา ตัด Fondazione Prada ไปไว้วันศุกร์เช้าได้</li>
+<li>คลิปเตือนเองว่า “หนังสือ update ไม่เร็วเท่า social media” → เช็กเวลาเปิดใน Google Maps อีกครั้งทุกจุด</li></ul></div>
+<div class="actions" id="actions"></div>
+<div id="route"></div>
+<h2 class="sec">➕ ถ้ามีเวลาเหลือ / อีกวัน</h2><p class="secsub">จุดอื่นในคลิปที่ไม่ได้ใส่ในเส้นทางหลัก เพราะอยู่คนละทิศ</p>
+<div id="extra"></div>
+<h2 class="sec">🛍️ ลิสต์ของที่ต้องซื้อจาก Milan (ตามหนังสือ)</h2>
+<div class="box" style="background:#fff;border-color:var(--line)">ในคลิปเปิดหน้า “Things we'd buy” ของหนังสือ — มีเช่น พาเนตโตเน่, ครีมเฮเซลนัท/แยม (Marchesi), Campari และไวน์ท้องถิ่น, ร่มด้ามไม้, รองเท้าหนัง, กระเป๋าหนัง, อุปกรณ์โกนหนวด · ซื้อได้แถว Marchesi, La Rinascente, Via Montenapoleone</div>
+</main>
+<footer>ที่มา: คลิป TikTok “เอาใจสายอาร์ต แจกพิกัด เที่ยว Milan Italy ตาม หนังสือ Monocle Travel” (7661550017953434901) · ที่อยู่/เวลาเปิดตรวจจากเว็บไกด์และรีวิว ณ ต.ค. 2026 · เวลาในตารางเป็นการจัดเส้นทางแนะนำ ไม่ได้มาจากคลิป</footer>
+<script>
+const S=[
+{t:"10:00",n:"Fondazione Prada + Bar Luce",k:"ศิลปะร่วมสมัย / คาเฟ่",a:"Largo Isarco 2 (Metro M3 Lodi T.I.B.B.)",q:"Fondazione Prada Largo Isarco 2 Milano",
+ mv:"🚇 จากโรงแรม: M3 Centrale → Lodi T.I.B.B. ~15 นาที แล้วเดิน 5 นาที",
+ m:["หอคอยสีทอง + อาคารโรงกลั่นเก่าที่ OMA รีโนเวต","งานในคลิป: Upside-Down Mushroom Room ของ Carsten Höller, Tears for everybody's looking at you ของ Damien Hirst","มีร้านหนังสืออาร์ตในอาคาร","Bar Luce — คาเฟ่ที่ Wes Anderson ออกแบบ สีชมพู-เขียวมิ้นต์ นั่งกินเค้กกับกาแฟ"],
+ tip:"เปิด 10:00–19:00 · ปิดวันอังคาร · นิทรรศการเปลี่ยนตลอด งานในคลิปอาจไม่อยู่แล้ว"},
+{t:"12:30",n:"A Santa Lucia",k:"มื้อกลางวัน",a:"Via San Pietro all'Orto 3 (ใกล้ San Babila)",q:"A Santa Lucia Via San Pietro all'Orto 3 Milano",
+ mv:"🚇 M3 Lodi → Montenapoleone หรือ Duomo แล้วเดิน ~7 นาที",
+ m:["ร้านพิซซ่า-อาหารอิตาเลียนตั้งแต่ปี 1929 ผนังเต็มไปด้วยรูปดาราฮอลลีวูดที่เคยมา","ในคลิปสั่งพิซซ่า Margherita + พาสต้าไส้ (tortellini)","รีวิว The Infatuation แนะนำ saltimbocca และ stracciatella alla romana"],
+ tip:"บรรยากาศคลาสสิก บริกรใส่แจ็กเก็ตขาว — ควรจอง โทร 02 7602 3155"},
+{t:"14:00",n:"Duomo di Milano — ดาดฟ้า",k:"สถาปัตยกรรม",a:"Piazza del Duomo",q:"Duomo di Milano Terrazze",
+ mv:"🚶 เดิน ~8 นาที",
+ m:["ขึ้นดาดฟ้าเดินระหว่างยอดแหลมโกธิก","มองลงไปเห็นลานจัตุรัสเหมือนตารางหมากรุก (มุมเด็ดในคลิป)","ดูประตูบรอนซ์แกะสลักด้านหน้าด้วย"],
+ tip:"จองรอบล่วงหน้า เลือกแบบมีลิฟต์"},
+{t:"15:15",n:"Museo del Novecento",k:"พิพิธภัณฑ์ศิลปะศตวรรษที่ 20",a:"Piazza del Duomo 8 (Palazzo dell'Arengario)",q:"Museo del Novecento Milano",
+ mv:"🚶 อยู่ติดจัตุรัส Duomo 2 นาที",
+ m:["Neon Installation ของ Lucio Fontana (1951) — ห้องกระจกที่มองเห็น Duomo เต็ม ๆ","อาคาร Arengario ยุค 1930s ที่หนังสือ Monocle ยกมา"],
+ tip:"ใช้เวลา ~45 นาทีพอ · ปิดวันจันทร์"},
+{t:"16:15",n:"Pasticceria Marchesi 1824 (Galleria)",k:"ขนม/คาเฟ่",a:"Galleria Vittorio Emanuele II ชั้น 1",q:"Pasticceria Marchesi 1824 Galleria Vittorio Emanuele II",
+ mv:"🚶 เดิน 3 นาที เข้า Galleria",
+ m:["ร้านขนมในเครือ Prada ตกแต่งโทน Pistachio Green ทั้งร้าน","หน้าต่างโค้งมองเห็นตึกรูปตาฝั่งตรงข้าม","ซื้อครีมเฮเซลนัท/แยมกระปุกสวยเป็นของฝาก"],
+ tip:"สาขาเดียวกับใน milan-food.html #2 — ไม่ต้องไปซ้ำถ้าไปแล้ว"},
+{t:"16:50",n:"Monumento a Leonardo da Vinci",k:"อนุสาวรีย์",a:"Piazza della Scala",q:"Monumento a Leonardo da Vinci Piazza della Scala Milano",
+ mv:"🚶 จาก Marchesi เดินทะลุ Galleria 3 นาที",
+ m:["รูปปั้นเลโอนาร์โดกลางจัตุรัส หน้าโรงละคร La Scala"],tip:"แวะถ่ายรูปสั้น ๆ"},
+{t:"17:00",n:"Via Montenapoleone · Cova · DMAG",k:"ช้อปปิ้ง",a:"Via Monte Napoleone 8 (Cova) · Via Manzoni 44 (DMAG)",q:"Pasticceria Cova Via Montenapoleone 8 Milano",
+ mv:"🚶 เดิน ~7 นาที",
+ m:["ถนนแบรนด์หรู Quadrilatero della Moda","Cova — ร้านขนมตั้งแต่ปี 1817 ตัวแทน Old Milanese Elegance","DMAG — outlet ในเมือง ของแบรนด์ลดราคา ในคลิปบอก “ของจึ้งมาก”"],
+ tip:"Excelsior ที่คลิปชอบปิดแล้ว → ไป La Rinascente (ติด Duomo) แทน",
+ x:[["DMAG Outlet","DMAG Outlet Via Manzoni 44 Milano"]]},
+{t:"17:45",n:"Pinacoteca di Brera",k:"หอศิลป์",a:"Via Brera 28",q:"Pinacoteca di Brera Milano",
+ mv:"🚶 เดิน ~12 นาที เข้าย่าน Brera",
+ m:["ลานกลางพร้อมรูปปั้นนโปเลียนบรอนซ์ ถ่ายรูปขาวดำแบบในคลิป","ผลงานชิ้นเอก เช่น The Kiss (Hayez), Dead Christ (Mantegna)","เดินต่อในย่าน Brera — มีร้าน Aesop ที่ตกแต่งเหมือนร้านขายยาสมัยก่อน"],
+ tip:"เข้าครั้งสุดท้ายก่อนปิดราว 40 นาที — เช็กเวลาให้ดี · ปิดวันจันทร์"},
+{t:"19:00",n:"10 Corso Como",k:"concept store / คาเฟ่",a:"Corso Como 10 (ใกล้ Garibaldi)",q:"10 Corso Como Milano",
+ mv:"🚶 เดิน ~15 นาที หรือ M2 Lanza → Garibaldi",
+ m:["concept store ต้นตำรับของมิลาน — แฟชั่น หนังสือ แกลเลอรี","คาเฟ่ในสวนเขียว ในคลิปบอก อาหาร/กาแฟ “อร่อยยย”","จบวันด้วย aperitivo"],
+ tip:"กลับโรงแรม: M2 Garibaldi → Centrale 2 ป้าย หรือเดิน ~20 นาที"}
+];
+const E=[
+{n:"Spazio Rossana Orlandi",k:"แกลเลอรีดีไซน์",a:"Via Matteo Bandello 14 (Sant'Ambrogio)",q:"Spazio Rossana Orlandi Via Matteo Bandello 14 Milano",
+ m:["แกลเลอรีของ Rossana Orlandi “เจ้าแม่ดีไซน์มิลาน” ทางเข้าคลุมด้วยไม้เลื้อย","ลานในบ้านเหมือนห้องนั่งเล่นของวงการดีไซน์"],tip:"ข้อมูลเดิม จ.–ส. 10:00–19:00 แต่บางเว็บระบุ “ปิดชั่วคราว” — เช็กก่อนไป"},
+{n:"Bar Magenta",k:"บาร์เก่า",a:"Via Giosuè Carducci 13 (มุม Corso Magenta)",q:"Bar Magenta Via Carducci 13 Milano",
+ m:["บาร์เก่าสไตล์มิลาน พื้นหินอ่อนโลโก้ร้าน","คลิป: เดินจาก Via Brera มา ~20 นาที"],tip:"ไปคู่กับ Rossana Orlandi + De Santis (milan-food.html)"},
+{n:"Triennale di Milano + Bagni Misteriosi",k:"พิพิธภัณฑ์ดีไซน์",a:"Viale Emilio Alemagna 6 (Parco Sempione)",q:"Triennale di Milano",
+ m:["พิพิธภัณฑ์ดีไซน์ สนามหญ้ากับเก้าอี้แดง","น้ำพุ “The Mysterious Baths” ของ Giorgio de Chirico (1973) งาน Metaphysical Art พื้นน้ำทำจากไม้ขัดเงา"],tip:"ปิดวันจันทร์ · เดินต่อไป Castello Sforzesco ได้"},
+{n:"L.O.V.E. (The Finger) — Maurizio Cattelan",k:"ประติมากรรม",a:"Piazza degli Affari",q:"L.O.V.E. Cattelan Piazza degli Affari Milano",
+ m:["มือหินอ่อนสูง 11 เมตร นิ้วถูกตัดเหลือนิ้วกลาง หน้าตลาดหลักทรัพย์"],tip:"ห่าง Duomo เดิน ~10 นาที"},
+{n:"La Rinascente",k:"ห้าง",a:"Piazza del Duomo",q:"La Rinascente Milano Piazza Duomo",
+ m:["แทน Excelsior ที่ปิดไปแล้ว — แฟชั่นครบ ชั้น 7 ฟู้ดฮอลล์วิว Duomo"],tip:"ใกล้ Duomo แวะได้ทุกเมื่อ"},
+{n:"Metro: ป้าย Bob Noorda + Photo Machine",k:"ดีไซน์ในสถานี",a:"สถานี Metro สาย M1 (เช่น Cadorna, Duomo)",q:"Cadorna FN M1 M2 Milano",
+ m:["ป้ายสาย M1 ออกแบบโดย Bob Noorda (1962) — ไอคอนงานกราฟิก","ตู้ถ่ายรูปขาวดำในสถานี “อย่าพลาด เท่มาก”"],tip:"สังเกตตอนนั่งรถไฟใต้ดิน ไม่ต้องไปเฉพาะ"}
+];
+const enc=s=>encodeURIComponent(s), mapU=q=>`https://www.google.com/maps/search/?api=1&query=${enc(q)}`;
+const route=`https://www.google.com/maps/dir/?api=1&origin=${enc(S[0].q)}&destination=${enc(S[S.length-1].q)}&waypoints=${S.slice(1,-1).map(s=>enc(s.q)).join('%7C')}`;
+document.getElementById('actions').innerHTML=`<a class="btn" target="_blank" rel="noopener" href="${route}">🧭 เปิดเส้นทางทั้งวันใน Google Maps</a><a class="btn alt" href="#extra">➕ จุดเสริม</a>`;
+const store=(()=>{try{return localStorage}catch(e){return null}})();
+const card=(s,id,head)=>`<section class="stop" id="${id}"><div>${head}<h3>${s.n}</h3><p class="addr">📍 ${s.a}</p>
+${s.mv?`<div class="move">${s.mv}</div>`:''}<ul>${s.m.map(x=>`<li>${x}</li>`).join('')}</ul><div class="tip">💡 ${s.tip}</div>
+<a class="btn" target="_blank" rel="noopener" href="${mapU(s.q)}">📍 เปิดใน Google Maps</a>${(s.x||[]).map(x=>` <a class="btn alt" target="_blank" rel="noopener" href="${mapU(x[1])}">📍 ${x[0]}</a>`).join('')}
+${id.startsWith('s')?`<label class="done"><input type="checkbox" data-k="${id}"> ไปแล้ว</label>`:''}</div>
+<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=${enc(s.q)}&z=16&output=embed" title="แผนที่ ${s.n}"></iframe></section>`;
+document.getElementById('route').innerHTML=`<h2 class="sec">🗺️ เส้นทางหลัก</h2><p class="secsub">${S.length} จุด · เริ่ม 10:00 จบราว 20:00</p>`+S.map((s,i)=>card(s,'s'+(i+1),`<span class="time">${s.t}</span><span class="type">${s.k}</span>`)).join('');
+document.getElementById('extra').innerHTML=E.map((s,i)=>card(s,'e'+(i+1),`<span class="type">${s.k}</span>`)).join('');
+document.querySelectorAll('input[data-k]').forEach(c=>{const k='1day_'+c.dataset.k;try{c.checked=store&&store.getItem(k)==='1'}catch(e){}c.addEventListener('change',()=>{try{store&&store.setItem(k,c.checked?'1':'0')}catch(e){}})});
+</script></body></html>
